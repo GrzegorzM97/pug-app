@@ -1,0 +1,19 @@
+extends layout
+block content
+    h1 Dodaj przedmiot
+    form(method="post" action="/add")
+        label Nazwa
+        br
+        input(type="text" name="name")
+        br
+        label Ocena
+        br
+        input(type="text" name="note")
+        br
+        label Autor
+        br
+        input(type="text" name="author")
+        br
+        input(type="submit" value="Dodaj")
+    if message!=''
+        p #{message}

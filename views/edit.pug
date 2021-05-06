@@ -1,0 +1,23 @@
+extends layout
+block content
+    h1 Edytuj przedmiot
+    form(method="post" action="/edit/"+id)
+        label Nazwa
+        br
+        input(type="text" name="name" value=name)
+        br
+        label Ocena
+        br
+        input(type="text" name="note" value=note)
+        br
+        label Autor
+        br
+        input(type="text" name="author" value=author)
+        br
+        label Data zaliczenia
+        br
+        input(type="date" name="completion_date" value=completion_date)
+        br
+        input(type="submit" value="Zmień")
+    if message!=''
+        p #{message}

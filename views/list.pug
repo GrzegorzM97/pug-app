@@ -1,0 +1,24 @@
+extends layout
+block content
+	h1 Lista przedmiotów
+	table
+		tr
+			th Lp
+			th Przedmiot
+			th Ocena
+			th Autor
+			th Data ukończenia
+			th Edycja
+			th Usuwanie
+		each cours, index in coursesList
+			tr
+				td=index+1
+				td=cours.name
+				td=cours.note
+				td=cours.author
+				td= moment(cours.completion_date).format('DD.MM.YYYY')
+				td
+					a(href="/edit/"+cours.id) Edytuj
+				td
+					a(href="/delete/"+cours.id) Usuń
+	
