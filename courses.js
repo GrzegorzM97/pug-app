@@ -6,7 +6,7 @@ var moment = require('moment');
 
 
 var app = express();
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 app.locals.moment = moment;
 

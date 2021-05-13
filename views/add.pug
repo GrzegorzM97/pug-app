@@ -14,6 +14,10 @@ block content
         br
         input(type="text" name="author")
         br
+        label Data zaliczenia
+        br
+        input(type="date" name="completion_date" value=completion_date)
+        br
         input(type="submit" value="Dodaj")
     if message!=''
         p #{message}
